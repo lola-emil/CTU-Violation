@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1"; // Change if your database server is different
-$username = "aso"; // Your MySQL username
-$password = "masterADMIN.1234.."; // Your MySQL password (usually empty for XAMPP)
+$username = "Kenji"; // Your MySQL username
+$password = "JamesRyan"; // Your MySQL password (usually empty for XAMPP)
 $dbname = "violation_tracker"; // Your database name
 
 // Create connection

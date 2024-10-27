@@ -1,8 +1,8 @@
 <?php
 // Connect to the database
 $servername = "127.0.0.1";
-$username = "aso";  // Replace with your DB username
-$password = "masterADMIN.1234..";  // Replace with your DB password
+$username = "Kenji";  // Replace with your DB username
+$password = "JamesRyan";  // Replace with your DB password
 $dbname = "violation_tracker";  // Replace with your DB name
 
 $conn = new mysqli($servername, $username, $password, $dbname);

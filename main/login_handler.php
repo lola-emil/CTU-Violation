@@ -1,8 +1,8 @@
 <?php
 session_start();
 $servername = "127.0.0.1";
-$username = "aso";
-$password = "masterADMIN.1234..";
+$username = "Kenji";
+$password = "JamesRyan";
 $dbname = "violation_tracker";
 
 // Create connection

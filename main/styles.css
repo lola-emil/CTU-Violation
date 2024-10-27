@@ -1,0 +1,287 @@
+body {
+    background-image: url('images/ctu.jpg'); /* Replace 'ctu.jpg' with the path to your background image */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-attachment: fixed; /* Fixed background position */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.left-container {
+    width: 300px; /* Set the width to a fixed length */
+    background-color: white; /* Thicker white background */
+    padding: 30px; /* Add more padding */
+    border-radius: 20px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increase box shadow for depth */
+}
+
+.left-container h2,
+.left-container h3 {
+    margin-top: 0; /* Remove margin from top */
+}
+.left-container .search-forms {
+    margin-top: 20%; /* Add margin to the bottom */
+}
+
+.left-container .violation-form {
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.left-container input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.left-container button {
+    padding: 10px 20px;
+    background-color: #f9a825; /* Orange button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+        /* Style for select input */
+        .right-container select {
+            width: calc(100% - 20px); /* Adjust select width */
+            padding: 10px; /* Add padding */
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border-radius */
+            margin-bottom: 10px; /* Add margin to the bottom */
+            margin-top: 20px;
+            font-weight: bold;
+            
+        }
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Right container resembling the screenshot */
+.right-container {
+    width: 600px;
+    height: 500px;
+    background-color: lightslategray; /* Match the grey-blue background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    position: relative;
+    color: white; /* White text for contrast */
+}
+
+.right-container h2,
+.right-container p {
+    margin: 10px 0; /* Add margin */
+}
+
+/* University logo (top-left corner) */
+.logo {
+    width: 80px; /* Set width */
+    height: 80px; /* Set height */
+    margin-bottom: 20px; /* Add margin to the bottom */
+    position: absolute; /* Set position to absolute */
+    top: 20px; /* Position from the top */
+    left: 20px; /* Position from the left */
+}
+
+        /* Style for text next to the logo */
+        .logo-text {
+            position: absolute; /* Set position to absolute */
+            top: 30px; /* Position from the top */
+            left: 120px; /* Position from the left */
+            margin-bottom: 10px; /* Add margin to the bottom */
+        }
+        .logo-d {
+            position: absolute; /* Set position to absolute */
+            top: 50px; /* Position from the top */
+            left: 120px; /* Position from the left */
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 10px; /* Add margin to the bottom */
+        }
+        
+        .logo-container {
+            width: 80px; /* Set width */
+            height: 80px; /* Set height */
+            margin-bottom: 20px; /* Add margin to the bottom */
+            position: absolute; /* Set position to absolute */
+            top: 20px; /* Position from the top */
+            left: 20px; /* Position from the left */
+        }
+.tracker-heading {
+    position: absolute;
+    top: 65px;
+    left: 140px;
+    margin-bottom: 10px; /* Add margin to the bottom */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Profile image style */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    background-image: url('/mnt/data/456755191_1245914606852832_4007482941706801221_n.png'); /* Replace with uploaded image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Vertical line */
+.vertical-line {
+    width: 2px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: 120px;
+    left: 265px;
+}
+
+/* Text beside the vertical line */
+.text-beside-line {
+    position: absolute;
+    top: 130px;
+    left: 285px;
+}
+
+.text-beside-line p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.offense-text {
+    position: absolute;
+    top: 410px;
+    font-size: 25px;
+    left: 50px;
+    color: #fff;
+}
+.sanction-text {
+    position: absolute;
+    top: 310px;
+    font-size: 25px;
+    left: 350px;
+    color: #fff;
+}
+ /* Style for modal */
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.search-forms label {
+    display: block; /* Display the label as a block element */
+    margin-bottom: 5px; /* Add margin to the bottom */
+    color: black; /* Set text color */
+}
+
+/* Violation text */
+.violation-text {
+    position: absolute;
+    top: 310px;
+    font-size: 25px;
+    left: 50px;
+    color: #fff;
+}
+/* Submit buttons (Cancel/Submit) */
+.submit-buttons {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+}
+
+.submit-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cancel-button {
+    background-color: #e53e3e; /* Red Cancel button */
+    color: white;
+}
+
+.submit-button {
+    background-color: #f9a825; /* Orange Submit button */
+    color: white;
+}
+
+#search-button-next {
+    background-color:#f9a825; /* Green background */
+    border: none; /* Remove borders */
+    color: black; /* White text */
+    padding: 15px 32px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    display: inline-block; /* Make button inline-block */
+    font-size: 16px; /* Font size */
+    margin: 10px 0; /* Margin for spacing */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+#search-button-next:hover {
+    background-color: red; /* Darker green on hover */
+}
+
+#search-button-next:active {
+    transform: scale(0.98); /* Slightly shrink button on click */
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* Make the image circular */
+    border: 2px solid #ccc; /* Optional border */
+}

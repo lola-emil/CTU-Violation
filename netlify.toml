@@ -1,0 +1,4 @@
+[[redirecrs]]
+from = "/*"
+to = "/index.php"
+status = 200

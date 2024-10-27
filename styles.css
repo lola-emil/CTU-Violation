@@ -1,0 +1,93 @@
+/* General Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background */
+    justify-content: center;
+    align-items: center; /* Ensures vertical centering */
+    animation: fadeInModal 0.5s ease-in-out;
+}
+
+.show-modal {
+    display: flex;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: black; /* Change background to white */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.modal h2 {
+    font-size: 2rem;
+    color: #333; /* Match the heading color with index.php */
+    margin-bottom: 10px;
+}
+
+.modal p {
+    font-size: 1.1rem;
+    color: #555; /* Subtle text color */
+    margin-bottom: 20px;
+}
+
+/* Table styling inside the modal */
+.modal table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+.modal table th, .modal table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.modal table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal table td {
+    color: #333;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555; /* Match close button color */
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Style for the image */
+.modal img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensure the image fits within the circle */
+    margin-bottom: 15px;
+}

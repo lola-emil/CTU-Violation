@@ -1,0 +1,588 @@
+/* Layout */
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin: 0 0 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a.active {
+    font-weight: bold;
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #121212;
+}
+
+td {
+    background-color: #121212;
+}
+
+.actions button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #11a0ff;
+    color: rgb(255, 255, 255);
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+.timer {
+    text-align: center;
+    color: red; /* Make countdown text red */
+    font-family: monospace; /* Optional: for a monospaced font */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #121212;
+    color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,0,0.15), transparent);
+    z-index: -1;
+    animation: pulse-bg 3s infinite;
+}
+
+@keyframes pulse-bg {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.6; }
+    100% { opacity: 0.4; }
+}
+
+.warning-banner {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    animation: flash 1s ease-in-out infinite;
+}
+
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.content {
+    text-align: center;
+    margin-top: 80px;
+    z-index: 10;
+    position: relative;
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+h1 {
+    font-size: 4rem;
+    color: #ff4d4d;
+    animation: fade-in 2s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: slide-in 1.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.button {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #ff4d4d; /* Matching color */
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.button:hover {
+    background-color: #d43c3c;
+    transform: scale(1.05);
+    animation: flash 1s ease-in-out infinite;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.glitch-text {
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff4d4d;
+    text-shadow: 0 0 5px #ffffff;
+    overflow: hidden;
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0px 2px 1px rgba(255, 255, 255, 0.1);
+        transform: translate(-50%, -50%);
+    }
+    20% {
+        text-shadow: 5px 2px 1px rgba(255, 0, 0, 0.5);
+        transform: translate(-52%, -48%);
+    }
+    40% {
+        text-shadow: -5px 2px 1px rgba(0, 255, 0, 0.5);
+        transform: translate(-48%, -52%);
+    }
+    60% {
+        text-shadow: 5px -2px 1px rgba(0, 0, 255, 0.5);
+        transform: translate(-50%, -50%);
+    }
+    80% {
+        text-shadow: -5px -2px 1px rgba(255, 255, 0, 0.5);
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        text-shadow: 0px 2px 1px rgba(255, 255, 255, 0.1);
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Warning Icon Overlay Styles */
+.warning-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 77, 77, 0.9);
+    color: white;
+    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.warning-overlay p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Show the warning overlay */
+.show-warning {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Admin Button Styling */
+.admin-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Matching color */
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space between buttons */
+    animation: pulse 1.5s infinite;
+}
+
+.admin-button:hover {
+    background-color: #d43c3c; /* Matching hover effect */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .glitch-text {
+        font-size: 6rem;
+    }
+
+    .button, .admin-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .warning-overlay {
+        font-size: 4rem;
+    }
+
+    .warning-overlay p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .glitch-text {
+        font-size: 4rem;
+    }
+
+    .button, .admin-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .warning-overlay {
+        font-size: 3rem;
+    }
+
+    .warning-overlay p {
+        font-size: 1rem;
+    }
+}
+.button-group {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    margin-top: 10px; /* Space between Appeal button and button group */
+}
+
+.admin-button, .staff-button {
+    margin: 0 10px; /* Space between the Admin and Staff buttons */
+}
+/* General Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker background */
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.8s ease-in-out;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* Adds a glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+    position: relative;
+    animation: glitch-modal 1.5s infinite;
+}
+
+@keyframes glitch-modal {
+    0%, 100% {
+        transform: translate(0);
+        filter: hue-rotate(0);
+    }
+    10% {
+        transform: translate(-1px, -1px);
+        filter: hue-rotate(10deg);
+    }
+    20% {
+        transform: translate(1px, 1px);
+        filter: hue-rotate(20deg);
+    }
+    30% {
+        transform: translate(-2px, 2px);
+        filter: hue-rotate(30deg);
+    }
+    40% {
+        transform: translate(2px, -2px);
+        filter: hue-rotate(40deg);
+    }
+    50% {
+        transform: translate(0);
+        filter: hue-rotate(0);
+    }
+}
+
+.school-logo {
+    width: 70px;
+    margin-bottom: 20px;
+    animation: pulse-logo 1.5s infinite;
+}
+
+@keyframes pulse-logo {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 5px rgba(255, 77, 77, 0.8);
+    
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: white;
+    letter-spacing: 0.5px;
+    animation: glitch-heading 2s infinite;
+}
+
+/* Glitch Effect for Heading */
+@keyframes glitch-heading {
+    0% {
+        text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5), -2px -2px 0 rgba(255, 77, 77, 0.7);
+    }
+    25% {
+        text-shadow: -2px 0 4px rgba(255, 255, 255, 0.5), 4px 0 8px rgba(255, 77, 77, 0.7);
+    }
+    50% {
+        text-shadow: 4px 0 2px rgba(255, 255, 255, 0.5), -2px 0 5px rgba(255, 77, 77, 0.7);
+    }
+    75% {
+        text-shadow: 0 4px 5px rgba(255, 255, 255, 0.5), 0 -4px 5px rgba(255, 77, 77, 0.7);
+    }
+    100% {
+        text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5), -2px -2px 0 rgba(255, 77, 77, 0.7);
+    }
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #ff4d4d;
+    box-shadow: 0px 0px 10px rgba(255, 77, 77, 0.8);
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    animation: pulse-btn 1.5s infinite;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #d43c3c;
+    box-shadow: 0px 0px 15px rgba(255, 77, 77, 0.8);
+}
+
+/* Button Pulse Effect */
+@keyframes pulse-btn {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#closeAdmin,
+#closeStaff {
+    color: #ff4d4d;
+    transition: color 0.3s ease;
+}
+
+#closeAdmin:hover,
+#closeStaff:hover {
+    color: #d43c3c;
+}
+@media print {
+    /* Ensure the body does not have a background when printing */
+    body {
+        background: none;
+        color: #000; /* Ensure text is visible */
+    }
+
+    .modal {
+        background-color: #F0F0F0; /* Specify the modal's background color */
+        -webkit-print-color-adjust: exact; /* Ensure the background color is printed */
+        print-color-adjust: exact; /* Ensure the background color is printed */
+        display: block; /* Ensure the modal is visible */
+    }
+
+    /* Hide the buttons when printing */
+    .print-button,
+    .cancel-button,
+    .no-print {
+        display: none !important; /* Use !important to ensure buttons are hidden */
+    }
+}
+/* Style the Dashboard link like normal text */
+a#dashboardLink {
+    color: inherit; /* Inherit color from parent, so it won't be blue */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Make it look clickable */
+    font-weight: normal; /* Optional: You can adjust font weight */
+}
+
+/* Optional: Add hover effect to show it's clickable */
+a#dashboardLink:hover {
+    color: #000; /* Adjust to any color you want for hover */
+    text-decoration: none; /* Keep underline off on hover */
+}

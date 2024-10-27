@@ -1,6 +1,6 @@
 <?php
 // Connect to the database
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";  // Replace with your DB username
 $password = "";  // Replace with your DB password
 $dbname = "violation_tracker";  // Replace with your DB name

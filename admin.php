@@ -1,6 +1,6 @@
 <?php
 session_start();
-$servername = "localhost"; // Your server name
+$servername = "127.0.0.1"; // Your server name
 $username = "root"; // Your database username
 $password = ""; // Your database password
 $dbname = "violation_tracker"; // Your database name

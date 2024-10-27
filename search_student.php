@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // Database connection
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbname = "violation_tracker";

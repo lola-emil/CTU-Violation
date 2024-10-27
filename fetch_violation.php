@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbname = "violation_tracker";

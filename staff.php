@@ -1,8 +1,8 @@
 <?php
 session_start();
 $servername = "127.0.0.1"; // Your server name
-$username = "root"; // Your database username
-$password = ""; // Your database password
+$username = "aso"; // Your database username
+$password = "masterADMIN.1234.."; // Your database password
 $dbname = "violation_tracker"; // Your database name
 
 // Create connection

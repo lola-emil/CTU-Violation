@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1";
-$username = "root";
-$password = ""; // your database password
+$username = "aso";
+$password = "masterADMIN.1234.."; // your database password
 $dbname = "violation_tracker";
 
 // Create connection

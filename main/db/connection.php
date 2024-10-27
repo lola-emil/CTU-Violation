@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost"; // Change if your database server is different
+$servername = "127.0.0.1"; // Change if your database server is different
 $username = "root"; // Your MySQL username
 $password = ""; // Your MySQL password (usually empty for XAMPP)
 $dbname = "violation_tracker"; // Your database name

@@ -56,7 +56,7 @@
         include 'formatTime.php'; // Adjust the path if needed
 
         // Connect to the database
-        $servername = "localhost";
+        $servername = "127.0.0.1";
         $username = "root";
         $password = "";
         $dbname = "violation_tracker";

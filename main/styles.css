@@ -446,8 +446,10 @@ label {
         top: -3%;
     }
     #profile-image {
-        width: 18%;
-        top: 100px;
+        width: 20%;
+        top: 23%;
+        height: 30%;
+        left: 8%;
     }
     .logo-text {
         font-size: 16px;

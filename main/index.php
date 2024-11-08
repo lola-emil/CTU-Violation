@@ -12,20 +12,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
 <div class="ctu-background-modify">
     <div class="container">
         <div class="left-container">
             <img src="images/logo.png" alt="CTU Logo" class="logo">
             <div class="search-forms">
                 <label for="search-id">Search ID Number</label>
-                <div class="search-cont">
-                   <input type="text" placeholder="Search ID Number" id="search-id">
-                </div>
+                <input type="text" placeholder="Search ID Number" id="search-id">
                 <div class="separator"><div class="line1"></div> or <div class="line2"></div></div>
                 <label for="search-lastname">Search Lastname</label>
-		 <div class="search-cont">
-                    <input type="text" placeholder="Search Lastname" id="search-lastname">
+                <input type="text" placeholder="Search Lastname" id="search-lastname">
+                <!-- "Next" Button -->
+                <button id="next-button">Next</button>
+            </div>
             <div class="ctu-background">
 	       <img src="images/ctu-background.png">
             </div>
@@ -35,17 +34,18 @@
         <div class="main-content">
             <div class="right-container">
                 <img src="images/logo.png" alt="CTU Logo" class="right-logo">
-                <h1 class="logo-text">Violation Tracker </h1>              
-                <img id="profile-image" src="images/profile-icon.png" > <!-- Adjusted margin-top -->
-                <div class="vertical-line"></div>
-                <div class="text-beside-line">
-                    <p>ID Number: <span id="display-id"></span></p>
-                    <p>Lastname: <span id="display-lastname"></span></p>
-                    <p>Firstname: <span id="display-firstname"></span></p>
-                    <p>Course: <span id="display-course"></span></p>
-                    <p>Department: <span id="display-department"></span></p>
-                </div>
-                     
+                <h1 class="logo-text">Violation Tracker </h1>
+                <div class="student-profile">
+                    <img id="profile-image" src="images/profile-icon.png" > <!-- Adjusted margin-top -->
+                    <div class="vertical-line"></div>
+                    <div class="text-beside-line">
+                       <p>ID Number: <span id="display-id"></span></p>
+                       <p>Lastname: <span id="display-lastname"></span></p>
+                       <p>Firstname: <span id="display-firstname"></span></p>
+                       <p>Course: <span id="display-course"></span></p>
+                       <p>Department: <span id="display-department"></span></p>
+                    </div>
+                </div>              
                 <div class="violation-text">
                     Violation:
                     <select id="light-offense" onchange="toggleOthersInput()">
@@ -160,7 +160,7 @@
             document.getElementById('display-firstname').textContent = data.firstname;
             document.getElementById('display-course').textContent = data.course;
             document.getElementById('display-department').textContent = data.department;
-            document.getElementById('profile-image').src = data.profile_image ? data.profile_image : 'profile-icon.png';
+            document.getElementById('profile-image').src = data.profile_image ? data.profile_image : 'images/profile-icon.png';
         }
 
         function displayMultipleStudents(students) {

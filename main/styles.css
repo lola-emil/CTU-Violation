@@ -30,15 +30,16 @@ body {
 }
 
 .left-container {
-    width: 330px;
+    width: 275px;
     height: 490px;
     background-color: #161E26;
-    padding: 20px 35px; /* Add more padding */
+    padding: 20px 50px; /* Add more padding */
     border-radius: 20px; /* Add border-radius for rounded corners */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increase box shadow for depth */
     color: white;
     justify-items: center;
     border-radius: 5px;
+    position: relative;
 }
 
 .left-container .violation-form {
@@ -46,7 +47,7 @@ body {
 }
 
 .left-container input[type="text"] {
-    width: calc(100% - 75px);
+    width: calc(100% - 26px);
     padding: 13px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -133,8 +134,8 @@ body {
     top: -55px;  
 }
 .right-logo {
-    width: 80px; 
-    height: 80px; 
+    width: 70px; 
+    height: 70px; 
     margin-bottom: 20px; 
     position: absolute;    
 }
@@ -143,10 +144,10 @@ body {
         .logo-text {
             position: absolute; 
             top: 45px; 
-            left: 130px; 
+            left: 115px; 
             margin-bottom: 10px; 
             font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
         }
         .logo-d {
             position: absolute; /* Set position to absolute */
@@ -169,12 +170,11 @@ body {
 
 /* Profile image style */
 #profile-image {
-    width: 170px;
-    height: 170px;
+    width: 22%;
     background-color: #000000;
     border-radius: 50%;
     position: absolute;
-    top: 125px;
+    top: 110px;
     left: 70px;
     background-image: url('/mnt/data/456755191_1245914606852832_4007482941706801221_n.png'); /* Replace with uploaded image */
     background-size: cover;
@@ -184,36 +184,35 @@ body {
 /* Vertical line */
 .vertical-line {
     width: 1px;
-    height: 185px;
+    height: 170px;
     background-color: #000000;
     position: absolute;
-    top: 120px;
+    top: 110px;
     left: 265px;
 }
 
 /* Text beside the vertical line */
 .text-beside-line {
     position: absolute;
-    top: 130px;
+    top: 115px;
     left: 285px;
 }
 
 .text-beside-line p {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 15px;
 }
 .offense-text {
     position: absolute;
-    top: 410px;
-    font-size: 20px;
-    left: 50px;  
+    top: 390px;
+    font-size: 17px;
+    left: 75px;  
 }
 .sanction-text {
     position: absolute;
     top: 310px;
-    font-size: 20px;
-    left: 350px;  
-    margin-top: 10px;
+    font-size: 17px;
+    left: 75px;  
 }
  /* Style for modal */
  .modal {
@@ -269,9 +268,8 @@ body {
 .violation-text {
     position: absolute;
     top: 310px;
-    font-size: 20px;
-    left: 50px;
-    margin-top: 10px;
+    font-size: 17px;
+    left: 380px;
 }
 /* Submit buttons (Cancel/Submit) */
 .right-buttons {
@@ -366,12 +364,12 @@ body {
 }
 
 .ctu-background {
-   position: relative;
-   width: 399px;
-   height: 175px;
-   left: 0;
-   top: -106px;
-   object-fit: cover;
+    position: relative;
+    width: 375px;
+    height: 175px;
+    left: 0px;
+    top: -105px;
+    object-fit: cover;
 }
 
 .ctu-background img {
@@ -386,4 +384,167 @@ body {
 
 .fa-search:before {
   font-size: 25px;
+}
+label {
+   font-size: 14px;
+
+}
+#others-input-container {
+   position: relative;
+   top: 370px;
+   left: 345px;
+   height: min-content;
+}
+#others-violation {
+    border: none;
+    outline: none;
+    border-bottom: .2em solid #000;
+    appearance: none;
+    background: none;
+    padding: 2%;
+    width: 228px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 30px;
+    }
+    .left-container {
+        width: 250px;
+        height: 385px;
+        top: 20px;
+        position: relative;
+    }
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+    .ctu-background {
+        top: -143px;
+        width: 350px;
+    }
+    .left-container input[type="text"] {
+        padding: 10px;
+        font-size: 15px;
+    }
+    .left-container button {
+        padding: 9px 16px;
+        font-size: 17px;
+        width: 245px;
+        letter-spacing: 1px;
+    }
+    .search-forms label {
+        font-size: 14px;
+    }
+    .right-container {
+        height: 384px;
+        top: 20px;
+        width: 600px;
+    }
+    .search-forms {
+        top: -3%;
+    }
+    #profile-image {
+        width: 18%;
+        top: 100px;
+    }
+    .logo-text {
+        font-size: 16px;
+        left: 115px;
+    }
+    .vertical-line {
+        height: 120px;
+        left: 215px;
+        top: 102px;
+    }
+    .text-beside-line {
+        left: 230px;
+        top: 102px;
+    }
+    .text-beside-line p {
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+    .sanction-text {
+        top: 240px;
+        font-size: 15px;
+    }
+    .right-container select {
+        padding: 10px;
+    }
+    .offense-text {
+        top: 310px;
+        font-size: 15px;
+    }
+    .violation-text {
+        top: 240px;
+        font-size: 15px;
+        left: 365px;
+    }
+    #others-input-container {
+        top: 280px;
+        left: 330px;
+    }
+    .right-buttons {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .left-container,
+    .right-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .left-container button {
+        font-size: 16px;
+    }
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+    #profile-image {
+        width: 100px;
+        height: 100px;
+        left: 10%;
+        top: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-container,
+    .right-container {
+        padding: 10px;
+    }
+    .left-container input[type="text"] {
+        font-size: 14px;
+    }
+    .left-container button {
+        font-size: 14px;
+    }
+    .right-container select {
+        font-size: 14px;
+    }
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    .tracker-heading {
+        font-size: 24px;
+    }
+    .right-buttons button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    #profile-image {
+        width: 80px;
+        height: 80px;
+        left: 10%;
+        top: 70px;
+    }
 }

@@ -15,7 +15,7 @@
 <div class="ctu-background-modify">
     <div class="container">
         <div class="left-container">
-            <img src="images/amologo.png" alt="CTU Logo" class="logo">
+            <img src="images/created.png" alt="CTU Logo" class="logo">
             <div class="search-forms">
                 <label for="search-id">Search ID Number</label>
                 <input type="text" placeholder="Search ID Number" id="search-id">
@@ -33,7 +33,7 @@
         <!-- Right content container -->
         <div class="main-content">
             <div class="right-container">
-                <img src="images/logo.png" alt="CTU Logo" class="right-logo">
+                <img src="images/created.png" alt="CTU Logo" class="right-logo">
                 <h1 class="logo-text">Violation Tracker </h1>
                 <div class="student-profile">
                     <img id="profile-image" src="images/profile-icon.png" > <!-- Adjusted margin-top -->

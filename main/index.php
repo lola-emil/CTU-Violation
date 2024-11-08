@@ -62,7 +62,7 @@
                 </div>
 
                 <!-- Input for specifying other violations -->
-                <div id="others-input-container" style="display: none; margin-top: 10px;"> <!-- Adjusted margin-top -->
+                <div id="others-input-container"> <!-- Adjusted margin-top -->
                     <label for="others-violation">Specify Violation:</label>
                     <input type="text" id="others-violation" placeholder="Specify the violation">
                 </div>

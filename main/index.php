@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
 <div class="ctu-background-modify">
     <div class="container">
         <div class="left-container">
-            <img src="logo.png" alt="CTU Logo" class="logo">
+            <img src="images/logo.png" alt="CTU Logo" class="logo">
             <div class="search-forms">
                 <label for="search-id">Search ID Number</label>
                 <div class="search-cont">
@@ -32,16 +33,16 @@
                 <button id="next-button">Next</button>
             </div>
             <div class="ctu-background">
-	       <img src="ctu-background.png">
+	       <img src="images/ctu-background.png">
             </div>
         </div>
 
         <!-- Right content container -->
         <div class="main-content">
             <div class="right-container">
-                <img src="logo.png" alt="CTU Logo" class="right-logo">
+                <img src="images/logo.png" alt="CTU Logo" class="right-logo">
                 <h1 class="logo-text">Violation Tracker </h1>              
-                <img id="profile-image" src="profile-icon.png" > <!-- Adjusted margin-top -->
+                <img id="profile-image" src="images/profile-icon.png" > <!-- Adjusted margin-top -->
                 <div class="vertical-line"></div>
                 <div class="text-beside-line">
                     <p>ID Number: <span id="display-id"></span></p>
@@ -165,7 +166,7 @@
             document.getElementById('display-firstname').textContent = data.firstname;
             document.getElementById('display-course').textContent = data.course;
             document.getElementById('display-department').textContent = data.department;
-            document.getElementById('profile-image').src = data.profile_image ? data.profile_image : 'ID/default_profile.png';
+            document.getElementById('profile-image').src = data.profile_image ? data.profile_image : 'profile-icon.png';
         }
 
         function displayMultipleStudents(students) {

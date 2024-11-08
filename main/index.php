@@ -15,7 +15,7 @@
 <div class="ctu-background-modify">
     <div class="container">
         <div class="left-container">
-            <img src="images/logo.png" alt="CTU Logo" class="logo">
+            <img src="images/logo.jpg" alt="CTU Logo" class="logo">
             <div class="search-forms">
                 <label for="search-id">Search ID Number</label>
                 <input type="text" placeholder="Search ID Number" id="search-id">

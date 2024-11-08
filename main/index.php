@@ -21,17 +21,11 @@
                 <label for="search-id">Search ID Number</label>
                 <div class="search-cont">
                    <input type="text" placeholder="Search ID Number" id="search-id">
-                   <div class="search-icon-id"><i class="fa fa-search" style="font-size:36px"></i></div>
                 </div>
                 <div class="separator"><div class="line1"></div> or <div class="line2"></div></div>
                 <label for="search-lastname">Search Lastname</label>
 		 <div class="search-cont">
                     <input type="text" placeholder="Search Lastname" id="search-lastname">
- 		    <div class="search-icon-lastname"><i class="fa fa-search" style="font-size:36px"></i></div>
-                </div>
-                <!-- "Next" Button -->
-                <button id="next-button">Next</button>
-            </div>
             <div class="ctu-background">
 	       <img src="images/ctu-background.png">
             </div>

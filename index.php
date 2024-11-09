@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="warning-banner">
-        <img src="images/logo.png" class="nav-logo">
+        <img src="images/ourlogo.png" class="nav-logo">
         <a href="#" class="admin-button" id="admin-btn"><img src="images/admin-icon.png" class="admin-icon"> </a>
     </div>
 
@@ -45,7 +45,7 @@
     <div id="adminModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeAdmin">&times;</span> 
-            <img src="images/logo.png" alt="Logo" class="logo">
+            <img src="images/ourlogo.png" alt="Logo" class="logo">
             <h3>Login Admin</h3>
             <form action="admin.php" method="post">
                 <label for="username">Username</label>
@@ -63,7 +63,7 @@
     <div id="staffModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeStaff">&times;</span>
-            <img src="images/logo.png" alt="School Logo" class="logo">
+            <img src="images/ourlogo.png" alt="School Logo" class="logo">
             <h3>Login Staff</h3>
             <form action="staff.php" method="post">
                 <label for="username">Username</label>

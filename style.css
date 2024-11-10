@@ -1,8 +1,9 @@
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
     100% { opacity: 0.4; }
 }
 
+/* Banner and Content Styling */
 .warning-banner {
     color: #ffffff;
     padding: 20px;
@@ -38,28 +40,29 @@ body {
 
 .content {
     text-align: center;
-    margin-top: 0;
-    position: relative;
     padding: 0 20px;
+    position: relative;
 }
 
+/* Header Styling */
 .upper-text h1 {
     font-size: 8.5rem;
     font-family: "Lexend Deca", sans-serif;
     letter-spacing: 1px;
 }
 
+/* Button Styling */
 .button {
     text-decoration: none;
     color: #ffffff;
     border-radius: 10px;
     font-size: 1.3rem;
     display: inline-block;
+    background: #FA9800;
+    padding: 15px 40px;
     transition: background-color 0.3s ease;
     position: relative;
     z-index: 10;
-    background: #FA9800;
-    padding: 15px 40px;
 }
 
 .button:hover {
@@ -67,18 +70,20 @@ body {
     transform: scale(1.05);
 }
 
+/* Additional Text Styling */
 .logo-name {
     color: #161E26;
 }
 
 .lower-text {
     font-size: 3rem;
-    position: relative;
-    top: -20px;
     color: #000;
     font-weight: 700;
+    position: relative;
+    top: -20px;
 }
 
+/* Warning Overlay Styling */
 .warning-overlay {
     position: fixed;
     top: 0;
@@ -108,7 +113,33 @@ body {
     visibility: visible;
 }
 
-/* Media Queries for Responsiveness */
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(107, 123, 135, 0.45);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Media Queries */
 @media (max-width: 851px) {
     .upper-text h1 {
         font-size: 6rem;
@@ -134,12 +165,6 @@ body {
     .lower-text {
         font-size: 2.1rem;
     }
-    #student-id {
-        font-size: 17px;
-    }
-    button#search-btn {
-        font-size: 17px;
-    }
     .button {
         font-size: 1rem;
         padding: 10px 30px;
@@ -156,13 +181,6 @@ body {
     .lower-text {
         font-size: 2rem;
         top: -15px;
-    }
-    #student-id {
-        width: 80%;
-        font-size: 16px;
-    }
-    button#search-btn {
-        font-size: 12px;
     }
     .button {
         font-size: 0.9rem;
@@ -185,58 +203,7 @@ body {
 .admin-button, .staff-button {
     margin: 0 10px;
 }
-
-/* General Modal Styling */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: rgba(107, 123, 135, 0.45);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-    position: relative;
-}
-.logo {
-    width: 80px;
-    animation: pulse-logo 1.5s infinite;
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-size: 2.3rem;
-    color: #ff4d4d;
-    margin-bottom: 10px;
-    text-shadow: 0px 0px 5px rgba(255, 77, 77, 0.8);
-    position: relative;
-    top: 5px;
-    left: 5px;
-}
-
-h3 {
-    text-shadow: 0px 0px 5px rgba(255, 77, 77, 0.8);
-    font-size: 1.5rem;
-    color: white;
-    letter-spacing: 0.5px;
-    position: relative;
-    margin-bottom: 20px;
-}
-
+/* Input Field Styling */
 input[type="text"],
 input[type="password"] {
     width: 320px;
@@ -257,6 +224,7 @@ input[type="password"]:focus {
     box-shadow: 0px 0px 10px rgba(34, 45, 57, 1);
 }
 
+/* Button Styling */
 .login-btn {
     padding: 10px 100px;
     background-color: #fa9800;
@@ -266,8 +234,7 @@ input[type="password"]:focus {
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .login-btn:hover {
@@ -275,7 +242,7 @@ input[type="password"]:focus {
     box-shadow: 0px 0px 15px rgba(255, 77, 77, 0.8);
 }
 
-/* Button Pulse Effect */
+/* Button Pulse Animation */
 @keyframes pulse-btn {
     0%, 100% {
         transform: scale(1);
@@ -285,6 +252,7 @@ input[type="password"]:focus {
     }
 }
 
+/* Close Button Styling */
 .close {
     position: absolute;
     top: -40px;
@@ -302,6 +270,7 @@ input[type="password"]:focus {
     width: 8%;
 }
 
+/* Navbar and Icon Styling */
 .nav-logo {
     width: 75px;
     height: 75px;
@@ -314,6 +283,20 @@ input[type="password"]:focus {
     position: relative;
 }
 
+.nav img {
+    width: 60px;
+}
+
+.nav {
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Search Form Styling */
 #search-student-form {
     display: flex;
     align-items: center;
@@ -330,33 +313,18 @@ input[type="password"]:focus {
     font-size: 1.2rem;
 }
 
+/* Timer Styling */
 .timer {
     position: relative;
     width: 14%;
 }
 
-.nav-modal {
-    display: flex;
-    align-items: center;
-}
-
+/* Modal Button Styling */
 #modal-btn {
     border-radius: 10px;
 }
 
-.nav img {
-    width: 60px;
-}
-
-.nav {
-    padding: 20px;
-    width: 100%;
-    top: 0;
-    display: flex;
-    position: relative;
-    justify-content: right;
-}
-
+/* Content and Container Styling */
 .container_s-manual {
     width: 100%;
     height: 90rem;

@@ -140,10 +140,11 @@ body {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 851px) {
+@media (max-width: 570px) {
     .upper-text h1 {
-        font-size: 6rem;
+        font-size: 4rem; /* Adjust this value as needed */
     }
+}
     .lower-text {
         font-size: 2.5rem;
     }
@@ -156,12 +157,13 @@ body {
     .warning-overlay p {
         font-size: 1.2rem;
     }
-}
 
 @media (max-width: 570px) {
     .upper-text h1 {
-        font-size: 5rem;
+        font-size: 4rem; /* Adjust this value as needed */
     }
+}
+
     .lower-text {
         font-size: 2.1rem;
     }
@@ -172,12 +174,12 @@ body {
     .warning-overlay p {
         font-size: 1rem;
     }
-}
 
-@media (max-width: 480px) {
-    .upper-text h1 {
-        font-size: 4.5rem;
-    }
+    @media (max-width: 570px) {
+        .upper-text h1 {
+            font-size: 4rem; /* Adjust this value as needed */
+        }
+        
     .lower-text {
         font-size: 2rem;
         top: -15px;

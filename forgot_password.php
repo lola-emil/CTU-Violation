@@ -9,8 +9,8 @@ use PHPMailer\PHPMailer\Exception;
 
 
 $servername = "127.0.0.1";
-$username = "root";
-$password = "";
+$username = "Kenji";
+$password = "JamesRyan";
 
 $conn = mysqli_connect($servername, $username, $password, "violation_tracker");
 

@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `reset_code`
+--
+
+DROP TABLE IF EXISTS `reset_code`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reset_code` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `code` varchar(100) DEFAULT NULL,
+  `type` enum('admin','staff') DEFAULT NULL,
+  `is_verified` tinyint(1) DEFAULT '0',
+  `expiry` timestamp NULL DEFAULT ((now() + interval 5 minute)),
+  `is_used` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reset_code`
+--
+
+LOCK TABLES `reset_code` WRITE;
+/*!40000 ALTER TABLE `reset_code` DISABLE KEYS */;
+INSERT INTO `reset_code` VALUES (1,'reset67385d808034bsa','staff',0,'2024-11-16 09:08:42',0),(2,'673860ad4e85c','staff',0,'2024-11-16 09:11:56',0),(3,'673860e971589','staff',0,'2024-11-16 09:12:56',0),(4,'67386117e4c0b','staff',1,'2024-11-16 09:10:43',0),(5,'673862828cc0a','staff',0,'2024-11-16 09:19:45',0),(6,'67386642f2c19','staff',1,'2024-11-16 09:35:45',0),(7,'673866ace905e','staff',1,'2024-11-16 09:37:32',0),(8,'67386734cfde9','staff',1,'2024-11-16 09:39:47',0),(9,'673867b1857bc','staff',0,'2024-11-16 09:41:52',0),(10,'673867bb32e17','staff',1,'2024-11-16 09:42:02',0),(11,'67386d34b2bc7','staff',1,'2024-11-16 10:05:24',0),(12,'67386d4160940','staff',0,'2024-11-16 10:05:37',0),(13,'673871be51934','staff',0,'2024-11-16 10:24:45',0),(14,'673902e865cbc','staff',1,'2024-11-16 20:44:08',0),(15,'67390ca2a60ba','staff',1,'2024-11-16 21:25:37',0),(16,'67390e36610a1','staff',1,'2024-11-16 21:32:22',0),(17,'67390e7043993','staff',1,'2024-11-16 21:33:19',1),(18,'67390f7954db2','staff',0,'2024-11-16 21:37:44',0),(19,'673910ae5055f','staff',0,'2024-11-16 21:42:53',0),(20,'673910aef395a','staff',0,'2024-11-16 21:42:54',0),(21,'673910af2164d','staff',1,'2024-11-16 21:42:56',0),(22,'67391163adf95','staff',1,'2024-11-16 21:45:54',0),(23,'673912ceb4563','staff',1,'2024-11-16 21:51:57',0),(24,'67391392cf524','staff',1,'2024-11-16 21:55:13',0);
+/*!40000 ALTER TABLE `reset_code` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `staff`
 --
 
@@ -115,7 +143,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','$2y$10$nwAxbd8/IE0P9XdTN4B5yujm3BjaJwJ4zX35CPCrJsXwwaBSKPrxW','admin'),(2,'staff','$2y$10$nwaPhRlDohD.421awwysX.3SWh/tBw.d3x7WJEWTN2pahlTAP1LhG','staff');
+INSERT INTO `users` VALUES (1,'admin','$2y$10$eNT6/.x4tubWUHFmWUoCUuP7oNhdcyiqyNRvWhg4FHyVCzJkXaeSa','admin'),(2,'staff','$2y$10$CVPewaMNlY1Sq4UXT5x5J.o/zXeAcPRzkl7GTVO9aeZSU/T8NVBWG','staff');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,7 +168,7 @@ CREATE TABLE `violation_history` (
   `actions` varchar(255) COLLATE utf8mb4_general_ci DEFAULT 'Pending',
   `image_url` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=522 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -149,7 +177,7 @@ CREATE TABLE `violation_history` (
 
 LOCK TABLES `violation_history` WRITE;
 /*!40000 ALTER TABLE `violation_history` DISABLE KEYS */;
-INSERT INTO `violation_history` VALUES (95,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','wearing-colored-shirts','1st','warning','2024-10-23 16:32:31','Pending','ID/Students/3210850.jpg'),(99,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','wearing-colored-shirts','1st','detention','2024-10-23 17:01:38','Pending','ID/Students/3210850.jpg'),(100,'3210824','Coca','Jim Hearty','Bachelor of Science in Information Technology','College of Technology','asdasdasd','1st','detention','2024-10-23 17:01:30','Pending','ID/Students/3210824.jpg'),(101,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','no-haircut','1st','detention','2024-10-23 17:17:51','Pending','ID/Students/3210850.jpg'),(106,'3210823','Basan','Abegail','Bachelor of Science in Information Technology','College of Technology','Minor Violation','','Warning','2024-10-25 10:49:14','Pending','ID/Students/3210823.jpg'),(107,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','Minor Violation','','Warning','2024-10-25 10:49:14','Pending','ID/Students/3210850.jpg'),(108,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','Minor Violation','','Warning','2024-10-25 10:49:20','Pending','ID/Students/3210850.jpg'),(109,'3210823','Basan','Abegail','Bachelor of Science in Information Technology','College of Technology','Minor Violation','','Warning','2024-10-25 10:49:20','Pending','ID/Students/3210823.jpg'),(110,'3210823','Basan','Abegail','Bachelor of Science in Information Technology','College of Technology','Minor Violation','','Warning','2024-10-25 10:49:28','Pending','ID/Students/3210823.jpg'),(111,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','Minor Violation','','Warning','2024-10-25 10:49:28','Pending','ID/Students/3210850.jpg'),(112,'3210823','Basan','Abegail','Bachelor of Science in Information Technology','College of Technology','Minor Violation','','Warning','2024-10-25 10:49:30','Pending','ID/Students/3210823.jpg'),(113,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','Minor Violation','','Warning','2024-10-25 10:49:30','Pending','ID/Students/3210850.jpg');
+INSERT INTO `violation_history` VALUES (100,'3210824','Coca','Jim Hearty','Bachelor of Science in Information Technology','College of Technology','asdasdasd','1st','detention','2024-10-23 17:01:30','Pending','ID/Students/3210824.jpg'),(114,'3210851','Macasa','Dan Andrei','Bachelor of Science in Information Technology','College of Technology','wearing-colored-shirts','1st','warning','2024-10-26 18:34:06','Pending','ID/Students/3210851.jpg'),(116,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','no-haircut','','Warning','2024-10-23 17:19:17','Pending','ID/Students/3210850.jpg'),(118,'3210820','Avila','Jiesel','Bachelor of Science in Information Technology','College of Technology','Moderate Violation','2nd','1 Day Suspension','2024-10-27 12:21:53','Pending','ID/Students/3210820.jpg'),(496,'3210820','Avila','Jiesel','Bachelor of Science in Information Technology','College of Technology','wearing-colored-shirts','2nd','1 Day Suspension','2024-10-26 08:35:05','Pending','ID/Students/3210820.jpg'),(497,'3210852','Impas','Rhynia','Bachelor of Science in Information Technology','College of Technology','wearing-colored-shirts','2nd','1 Day Suspension','2024-10-27 07:31:53','Pending','ID/Students/3210852.jpg'),(513,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','Moderate Violation','1st','warning','2024-11-16 04:36:56','Pending','ID/Students/3210850.jpg'),(514,'3210839','Gecozo','Alysson','Bachelor of Science in Information Technology','College of Technology','Moderate Violation','1st','Warning','2024-11-16 04:36:56','Pending','ID/Students/3210839.jpg'),(515,'3210839','Gecozo','Alysson','Bachelor of Science in Information Technology','College of Technology','Major Violation','2nd','1 Day Suspension','2024-11-16 04:36:57','Pending','ID/Students/3210839.jpg'),(516,'3210839','Gecozo','Alysson','Bachelor of Science in Information Technology','College of Technology','Minor Violation','3rd','1 Week Suspension','2024-11-16 04:36:58','Pending','ID/Students/3210839.jpg'),(517,'3210839','Gecozo','Alysson','Bachelor of Science in Information Technology','College of Technology','Moderate Violation','1st','Warning','2024-11-16 04:36:59','Pending','ID/Students/3210839.jpg'),(518,'3210839','Gecozo','Alysson','Bachelor of Science in Information Technology','College of Technology','Major Violation','2nd','1 Day Suspension','2024-11-16 04:37:00','Pending','ID/Students/3210839.jpg'),(519,'3210839','Gecozo','Alysson','Bachelor of Science in Information Technology','College of Technology','Minor Violation','3rd','1 Week Suspension','2024-11-16 04:37:01','Pending','ID/Students/3210839.jpg'),(520,'3210839','Gecozo','Alysson','Bachelor of Science in Information Technology','College of Technology','Moderate Violation','1st','Warning','2024-11-16 04:37:02','Pending','ID/Students/3210839.jpg'),(521,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','wearing-colored-shirts','2nd','1 Day Suspension','2024-11-11 19:51:13','Pending','ID/Students/3210850.jpg');
 /*!40000 ALTER TABLE `violation_history` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -175,8 +203,9 @@ CREATE TABLE `violations` (
   `start_time` int NOT NULL,
   `end_time` timestamp NULL DEFAULT NULL,
   `image_url` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `cycle` int DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=326 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=333 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,7 +214,7 @@ CREATE TABLE `violations` (
 
 LOCK TABLES `violations` WRITE;
 /*!40000 ALTER TABLE `violations` DISABLE KEYS */;
-INSERT INTO `violations` VALUES (321,'3210823','Basan','Abegail','Bachelor of Science in Information Technology','College of Technology','wearing-colored-shirts','','Warning','2024-10-23 17:01:16','Pending',0,'2024-11-20 09:19:17','ID/Students/3210823.jpg'),(325,'3210850','Cololot','John Lloyd','Bachelor of Science in Information Technology','College of Technology','no-haircut','','Warning','2024-10-23 17:19:17','Pending',0,'2024-11-20 09:19:17','ID/Students/3210850.jpg');
+INSERT INTO `violations` VALUES (329,'3210839','Gecozo','Alysson','Bachelor of Science in Information Technology','College of Technology','wearing-colored-shirts','2nd','1 Day Suspension','2024-10-27 13:10:59','Pending',0,'2024-11-20 06:15:59','ID/Students/3210839.jpg',19);
 /*!40000 ALTER TABLE `violations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -198,4 +227,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-25 11:14:37
+-- Dump completed on 2024-11-17  6:10:15

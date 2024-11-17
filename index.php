@@ -1,5 +1,8 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +11,50 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .alert {
+            background: black;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 400px;
+            box-shadow: 0 0 15px rg ba(0, 0, 0, 0.2);
+            color: #f8f8f8;
+
+
+            position: fixed;
+            top: 5px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            z-index: 99999999999;
+        }
+    </style>
 </head>
+
 <body>
+
+    <?php if (isset($_SESSION["form_message"])): ?>
+        <div class="alert">
+            <?php echo $_SESSION["form_message"] ?>
+        </div>
+    <?php endif ?>
+
+
     <div class="warning-banner">
         <img src="images/ourlogo.png" class="nav-logo">
         <a href="#" class="admin-button" id="admin-btn"><img src="images/admin-icon.png" class="admin-icon"> </a>
     </div>
 
     <div class="content">
-         <div class="logo-name">
-            <div class="upper-text"><h1>VIOLATI<img src="images/timer.png" class="timer">N</h1></div>
+        <div class="logo-name">
+            <div class="upper-text">
+                <h1>VIOLATI<img src="images/timer.png" class="timer">N</h1>
+            </div>
             <div class="lower-text">TRACKER</div>
         </div>
 
@@ -28,7 +65,7 @@
         </form>
 
         <div class="button-group">
-           
+
             <a href="#" class="button staff-button" id="staff-btn">Report Violation</a> <!-- Staff button -->
         </div>
     </div>
@@ -41,24 +78,23 @@
         <p>Redirecting...</p>
     </div>
 
-    <!-- Admin Login Modal (with Forgot Password) -->
-<div id="adminModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeAdmin">&times;</span> 
-        <img src="images/ourlogo.png" alt="Logo" class="logo">
-        <h3>Login Admin</h3>
-        <form action="admin.php" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="admin-username" name="username" placeholder="Admin" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="admin-password" name="password" placeholder="Password" required>
-            
-            <button type="submit" class="login-btn" id="modal-btn">Login</button>
-        </form>
-        <a href="#" id="forgotAdminPassword">Forgot Password?</a>
+    <!-- Admin Login Modal (unchanged) -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAdmin">&times;</span>
+            <img src="images/ourlogo.png" alt="Logo" class="logo">
+            <h3>Login Admin</h3>
+            <form action="admin.php" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="admin-username" name="username" placeholder="Admin" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="admin-password" name="password" placeholder="Password" required>
+
+                <button type="submit" class="login-btn" id="modal-btn">Login</button>
+            </form>
+        </div>
     </div>
-</div>
 
 <!-- Staff Login Modal (with Forgot Password) -->
 <div id="staffModal" class="modal">
@@ -126,4 +162,7 @@
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
+
 </html>
+
+<?php unset($_SESSION["form_message"])?>

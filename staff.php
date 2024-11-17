@@ -28,6 +28,9 @@ $lockout_time = 30; // 30 seconds lockout
 if ($_SESSION['staff_login_attempts'] >= $max_attempts) {
     if (time() - $_SESSION['last_staff_attempt_time'] < $lockout_time) {
         $error_message = "Too many failed attempts. Please try again later.";
+        $_SESSION["error_message"] = $error_message;
+
+        header("Location: /CTU-Violation/reset_staff_password.php");
     } else {
         $_SESSION['staff_login_attempts'] = 0; // Reset attempts after lockout period
     }
@@ -59,8 +62,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($error_message)) {
             }
         }
 
+        echo $_SESSION['staff_login_attempts'];
+
         // Failed login, increase attempt count
-        $_SESSION['staff_login_attempts']++;
+        $_SESSION['staff_login_attempts'] += 1;
         $_SESSION['last_staff_attempt_time'] = time();
         $error_message = "Invalid username or password. Attempts remaining: " . ($max_attempts - $_SESSION['staff_login_attempts']);
 
@@ -89,6 +94,9 @@ $conn->close();
             <p><?php echo $error_message; ?></p>
         </div>
     </div>
+
+    <?php if ($_SESSION['staff_login_attempts'] >= $max_attempts && time() - $_SESSION['last_staff_attempt_time'] < $lockout_time) {
+    }?>
 <?php endif; ?>
 
 <script>

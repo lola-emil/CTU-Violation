@@ -1,8 +1,8 @@
 <?php
 session_start();
 $servername = "127.0.0.1"; // Your server name
-$username = "aso"; // Your database username
-$password = "masterADMIN.1234.."; // Your database password
+$username = "root"; // Your database username
+$password = ""; // Your database password
 $dbname = "violation_tracker"; // Your database name
 
 // Create connection
@@ -28,6 +28,9 @@ $lockout_time = 30; // 30 seconds lockout
 if ($_SESSION['admin_login_attempts'] >= $max_attempts) {
     if (time() - $_SESSION['last_admin_attempt_time'] < $lockout_time) {
         $error_message = "Too many failed attempts. Please try again later.";
+        $_SESSION["error_message"] = $error_message;
+        
+        header("Location: /CTU-Violation/reset_admin_password.php");
     } else {
         $_SESSION['admin_login_attempts'] = 0; // Reset attempts after lockout period
     }

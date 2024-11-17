@@ -8,44 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Violation Tracker</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<div class="ctu-background-modify">
     <div class="container">
         <div class="left-container">
-            <div class="logo-container">
-                <img src="images/awlogouy.png" alt="CTU Logo" class="logo">
-            </div>
-            <h2 class="tracker-heading">E-Logbook</h2>
+            <img src="images/created.png" alt="CTU Logo" class="logo">
             <div class="search-forms">
                 <label for="search-id">Search ID Number</label>
                 <input type="text" placeholder="Search ID Number" id="search-id">
-                
-                <div class="separator">-------- or --------</div>
-                
+                <div class="separator"><div class="line1"></div> or <div class="line2"></div></div>
                 <label for="search-lastname">Search Lastname</label>
                 <input type="text" placeholder="Search Lastname" id="search-lastname">
-
                 <!-- "Next" Button -->
                 <button id="next-button">Next</button>
+            </div>
+            <div class="ctu-background">
+	       <img src="images/ctu-background.png">
             </div>
         </div>
 
         <!-- Right content container -->
         <div class="main-content">
             <div class="right-container">
-                <img src="images/Logo.png" alt="CTU Logo" class="logo">
-                <h2 class="logo-text">Cebu Technological University </h2>
-                <h3 class="logo-d">Danao Campus </h3>                
-                <img id="profile-image" src="" alt="Profile Image" style="border-radius: 50%; width: 150px; height: 150px; margin-top: 20px;"> <!-- Adjusted margin-top -->
-                <div class="vertical-line"></div>
-                <div class="text-beside-line">
-                    <p>ID Number: <span id="display-id"></span></p>
-                    <p>Lastname: <span id="display-lastname"></span></p>
-                    <p>Firstname: <span id="display-firstname"></span></p>
-                    <p>Course: <span id="display-course"></span></p>
-                    <p>Department: <span id="display-department"></span></p>
-                </div>
-                     
+                <img src="images/created.png" alt="CTU Logo" class="right-logo">
+                <h1 class="logo-text">Violation Tracker </h1>
+                <div class="student-profile">
+                    <img id="profile-image" src="images/profile-icon.png" > <!-- Adjusted margin-top -->
+                    <div class="vertical-line"></div>
+                    <div class="text-beside-line">
+                       <p>ID Number: <span id="display-id"></span></p>
+                       <p>Lastname: <span id="display-lastname"></span></p>
+                       <p>Firstname: <span id="display-firstname"></span></p>
+                       <p>Course: <span id="display-course"></span></p>
+                       <p>Department: <span id="display-department"></span></p>
+                    </div>
+                </div>              
                 <div class="violation-text">
                     Violation:
                     <select id="light-offense" onchange="toggleOthersInput()">
@@ -57,7 +57,7 @@
                 </div>
 
                 <!-- Input for specifying other violations -->
-                <div id="others-input-container" style="display: none; margin-top: 10px;"> <!-- Adjusted margin-top -->
+                <div id="others-input-container"> <!-- Adjusted margin-top -->
                     <label for="others-violation">Specify Violation:</label>
                     <input type="text" id="others-violation" placeholder="Specify the violation">
                 </div>
@@ -81,14 +81,14 @@
                     </select> 
                 </div>
 
-                <div class="submit-buttons">
+                <div class="right-buttons">
                     <button class="cancel-button">Cancel</button>
                     <button class="submit-button">Submit</button>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
     <!-- Modal for multiple students -->
     <div id="multipleStudentsModal" class="modal">
         <div class="modal-content">
@@ -160,7 +160,7 @@
             document.getElementById('display-firstname').textContent = data.firstname;
             document.getElementById('display-course').textContent = data.course;
             document.getElementById('display-department').textContent = data.department;
-            document.getElementById('profile-image').src = data.profile_image ? data.profile_image : 'ID/default_profile.png';
+            document.getElementById('profile-image').src = data.profile_image ? data.profile_image : 'images/profile-icon.png';
         }
 
         function displayMultipleStudents(students) {

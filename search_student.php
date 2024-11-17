@@ -3,8 +3,8 @@ header('Content-Type: application/json');
 
 // Database connection
 $servername = "127.0.0.1";
-$username = "aso";
-$password = "masterADMIN.1234..";
+$username = "root";
+$password = "";
 $dbname = "violation_tracker";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

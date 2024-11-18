@@ -31,14 +31,14 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'ewyaks.5@gmail.com';
-    $mail->Password = 'esmx qqsj bamx rvwf';
+    $mail->Username = 'cololot.johnlloyd@gmail.com';
+    $mail->Password = 'jpbe swjt juen hjsl';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-    $mail->setFrom('ewyaks.5@gmail.com', 'Rens Saladaga');
-    $mail->addAddress('staleexam19@gmail.com', 'Recipient Name');
-    $mail->addReplyTo('ewyaks.5@gmail.com', 'Rens Saladaga');
+    $mail->setFrom('cololot.johnlloyd@gmail.com', 'Programmer');
+    $mail->addAddress('staffvtracker@gmail.com', 'Admin');
+    $mail->addReplyTo('cololot.johnlloyd@gmail.com', 'Programmer');
 
     $mail->isHTML(true); // Email format kay HTML
     $mail->Subject = 'Test Email from PHPMailer';
